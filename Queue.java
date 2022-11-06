@@ -1,12 +1,12 @@
 public class Queue {
     private int length;
-    private String[] elements;
+    private int[] elements;
     private int numberOfElements;
     private int nextElementIndex;
 
     public Queue(int length) {
         this.length = length;
-        elements = new String[length];
+        elements = new int[length];
         numberOfElements = 0;
         nextElementIndex = 0;
     }
@@ -19,7 +19,7 @@ public class Queue {
         return numberOfElements == length;
     }
 
-    public boolean addElement(String element) {
+    public boolean addElement(int element) {
         int endOfQueue = (numberOfElements + nextElementIndex) % length;
 
         if (isFull()) {
@@ -32,8 +32,8 @@ public class Queue {
         return true;
     }
 
-    public String removeElement() {
-        String element = null;
+    public int removeElement() {
+        int element = 0;
 
         if (isEmpty()) {
             return element;
