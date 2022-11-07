@@ -57,7 +57,7 @@ public class Main {
         return binary;
     }
 
-    private void printQueueElements(Queue queue) {
+    private void cleanQueueElements(Queue queue) {
         String output = "Successful.\n\nYour queue:\n";
 
         for (int currentIndex = 0; !queue.isEmpty(); currentIndex++) {
@@ -86,7 +86,7 @@ public class Main {
         queue = main.fillQueue(numberOfBinaryRepresentations);
 
         System.out.println("Successful.\nGenerating the binary representantions...");
-        main.printQueueElements(queue);
+        main.cleanQueueElements(queue);
 
         System.out.println("\nSee you soon.");
     }
